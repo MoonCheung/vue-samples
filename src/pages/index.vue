@@ -1,22 +1,23 @@
 <template>
   <div>
-    <div id="nav">
-      <ul>
-        <li>
-           <router-link to="/form">表单组件</router-link>
-        </li>
-      </ul>
-    </div>
+    <strong>{{ massage }}</strong>
+    <ol>
+      <li><router-link to='/vIf'>vIf&vElse&vShow 实例</router-link></li>
+    </ol>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
-  
+  data () {
+    return {
+      massage: 'Vue2.0基础'
+    }
+  }
 }
 </script>
 
-<style scoped>
-  
-</style>
+<style lang="sass" scoped>
 
+</style>

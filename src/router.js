@@ -5,16 +5,15 @@ Vue.use(Router);
 
 export default new Router({
   mode: 'history',
+  base: __dirname,
   routes: [
     {
       path: '/',
       name: 'index',
       component: () => import('./pages/index')
-    },
-    {
-      path: '/form',
-      name: 'form',
-      component: () => import('./pages/form')
+    },{
+      path: '/vIf',
+      component: () => import('./pages/basic/vIf')
     }
   ]
 })
