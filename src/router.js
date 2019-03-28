@@ -14,6 +14,9 @@ export default new Router({
     },{
       path: '/vIf',
       component: () => import('./pages/basic/vIf')
+    },{
+      path: '/vFor',
+      component: () => import('./pages/basic/vFor')
     }
   ]
 })

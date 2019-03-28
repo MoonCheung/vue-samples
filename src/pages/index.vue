@@ -1,9 +1,10 @@
 <template>
   <div>
     <strong>{{ massage }}</strong>
-    <ol>
+    <ul class="list">
       <li><router-link to='/vIf'>vIf&vElse&vShow 实例</router-link></li>
-    </ol>
+      <li><router-link to='/vFor'>vFor 实例</router-link></li>
+    </ul>
     <router-view></router-view>
   </div>
 </template>
@@ -18,6 +19,12 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-
+<style lang="css">
+ul,li{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  list-style: none;
+}
 </style>
