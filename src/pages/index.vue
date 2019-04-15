@@ -1,30 +1,45 @@
 <template>
-  <div>
-    <strong>{{ massage }}</strong>
+  <div class="home">
+    <img alt="Vue logo"
+         src="../assets/logo.png">
+    <p>{{ massage }}</p>
     <ul class="list">
-      <li><router-link to='/vIf'>vIf&vElse&vShow 实例</router-link></li>
-      <li><router-link to='/vFor'>vFor 实例</router-link></li>
+      <li>
+        <router-link to='/vIf'>vIf&vElse&vShow 实例</router-link>
+      </li>
+      <li>
+        <router-link to='/vFor'>vFor 实例</router-link>
+      </li>
+      <li>
+        <router-link to='/Props'>Props 实例</router-link>
+      </li>
     </ul>
-    <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
-  data () {
+  name: "Index",
+  data() {
     return {
-      massage: 'Vue2.0基础'
-    }
+      massage: "Vue2.0基础"
+    };
   }
-}
+};
 </script>
 
 <style lang="css">
-ul,li{
+ul,
+li {
   margin: 0;
   padding: 0;
 }
-ul{
+ul {
   list-style: none;
+}
+.home {
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 </style>

@@ -8,14 +8,13 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      isLogin:true
-    }
+      isLogin: true
+    };
   }
-}
+};
 </script>
 
 <style>
-
 </style>
