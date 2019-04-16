@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Event from "@/components/Event_copy";
+import Event from "@/components/Event_cmpt";
 export default {
   components: {
     Event

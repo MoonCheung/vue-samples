@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import VProps from "@/components/Props_copy";
+import VProps from "@/components/Props_cmpt";
 
 export default {
   components: {

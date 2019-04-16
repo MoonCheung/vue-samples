@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import VBigProps from "@/components/bigProps_copy";
+import VBigProps from "@/components/bigProps_cmpt";
 
 export default {
   components: {
