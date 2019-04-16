@@ -1,45 +1,32 @@
 <template>
   <div>
-    name: {{ name }}
-    <br />
-    type: {{ type }}
-    <br />
-    list: {{ list }}
-    <br />
-    isVisible: {{ isVisible }}
-    <br />
-    <button @click="handleClick">改变类型</button>
+    <v-props name='Hello Vue'
+             :type="type"
+             :is-visible="false"
+             :on-change="handlePropChange"
+             title="属性Demo"
+             class="test1"
+             :class="['test2']"
+             :style="{ mariginTop: '20px'}"
+             style="marginTop: 10px" />
   </div>
 </template>
 
 <script>
+import VProps from "@/components/Props_copy";
+
 export default {
-  name: "propsDemo",
-  props: {
-    // 自定义验证函数
-    name: String,
-    type: {
-      validator: function(value) {
-        // 这个值必须匹配下列字符串中的一个
-        return ["success", "warning", "danger"].indexOf(value) !== -1;
-      }
-    },
-    list: {
-      type: Array,
-      default: () => []
-    },
-    isVisible: {
-      type: Boolean,
-      default: false
-    },
-    onChange: {
-      type: Function,
-      default: () => {}
-    }
+  components: {
+    VProps
+  },
+  data() {
+    return {
+      type: "success"
+    };
   },
   methods: {
-    handleClick() {
-      this.onChange(this.type === "success" ? "warning" : "error");
+    handlePropChange(val) {
+      this.type = val;
     }
   }
 };

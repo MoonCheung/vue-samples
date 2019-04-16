@@ -13,6 +13,12 @@
       <li>
         <router-link to='/Props'>Props 实例</router-link>
       </li>
+      <li>
+        <router-link to='/bigProps'>bigProps 实例</router-link>
+      </li>
+      <li>
+        <router-link to='/Event'>Event 实例</router-link>
+      </li>
     </ul>
   </div>
 </template>

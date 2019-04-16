@@ -11,16 +11,26 @@ export default new Router({
       path: '/',
       name: 'index',
       component: Index
-    }, {
+    },
+    {
       path: '/vIf',
       component: () => import('./pages/basic/vIf')
-    }, {
+    },
+    {
       path: '/vFor',
       component: () => import('./pages/basic/vFor')
     },
     {
       path: '/props',
       component: () => import('./pages/basic/Props')
+    },
+    {
+      path: '/bigProps',
+      component: () => import('./pages/basic/bigProps')
+    },
+    {
+      path: '/event',
+      component: () => import('./pages/basic/Event')
     }
   ]
 })
