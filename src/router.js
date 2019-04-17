@@ -14,31 +14,31 @@ export default new Router({
     },
     {
       path: '/vIf',
-      component: () => import('./pages/basic/vIf')
+      component: () => import('./pages/basis/vIf')
     },
     {
       path: '/vFor',
-      component: () => import('./pages/basic/vFor')
+      component: () => import('./pages/basis/vFor')
     },
     {
       path: '/props',
-      component: () => import('./pages/basic/Props')
+      component: () => import('./pages/basis/Props')
     },
     {
       path: '/bigProps',
-      component: () => import('./pages/basic/bigProps')
+      component: () => import('./pages/basis/bigProps')
     },
     {
       path: '/event',
-      component: () => import('./pages/basic/Event')
+      component: () => import('./pages/basis/Event')
     },
     {
       path: '/personalInfo',
-      component: () => import('./pages/basic/PersonalInfo')
+      component: () => import('./pages/basis/PersonalInfo')
     },
     {
       path: '/children',
-      component: () => import('./pages/basic/Children')
+      component: () => import('./pages/basis/Children')
     }
   ]
 })
