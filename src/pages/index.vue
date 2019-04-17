@@ -22,6 +22,9 @@
       <li>
         <router-link to='/PersonalInfo'>双向绑定与单向数据流实例</router-link>
       </li>
+      <li>
+        <router-link to='/Children'>虚拟DOM实例</router-link>
+      </li>
     </ul>
   </div>
 </template>

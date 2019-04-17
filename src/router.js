@@ -33,8 +33,12 @@ export default new Router({
       component: () => import('./pages/basic/Event')
     },
     {
-      path: '/PersonalInfo',
+      path: '/personalInfo',
       component: () => import('./pages/basic/PersonalInfo')
+    },
+    {
+      path: '/children',
+      component: () => import('./pages/basic/Children')
     }
   ]
 })
