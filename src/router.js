@@ -39,6 +39,14 @@ export default new Router({
     {
       path: '/children',
       component: () => import('./pages/basis/Children')
+    },
+    {
+      path: '/PropsAndData',
+      component: () => import('./pages/basis/PropsAndData')
+    },
+    {
+      path: '/CAW',
+      component: () => import('./pages/basis/CAW')
     }
   ]
 })

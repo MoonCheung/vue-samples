@@ -25,6 +25,12 @@
       <li>
         <router-link to='/Children'>虚拟DOM实例</router-link>
       </li>
+      <li>
+        <router-link to='/PropsAndData'>Props属性与Data状态实例</router-link>
+      </li>
+      <li>
+        <router-link to='/CAW'>计算属性与侦听器实例</router-link>
+      </li>
     </ul>
   </div>
 </template>
