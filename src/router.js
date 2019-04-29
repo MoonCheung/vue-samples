@@ -47,6 +47,14 @@ export default new Router({
     {
       path: '/CAW',
       component: () => import('./pages/basis/CAW')
+    },
+    {
+      path: '/directive',
+      component: () => import('./pages/basis/Directive')
+    },
+    {
+      path: '/ProvideAndInject',
+      component: () => import('./pages/basis/ProvideAndInject')
     }
   ]
 })

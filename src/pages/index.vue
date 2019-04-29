@@ -31,6 +31,12 @@
       <li>
         <router-link to='/CAW'>计算属性与侦听器实例</router-link>
       </li>
+      <li>
+        <router-link to='/directive'>自定义指令</router-link>
+      </li>
+      <li>
+        <router-link to='/ProvideAndInject'>常用特性Provide与Inject</router-link>
+      </li>
     </ul>
   </div>
 </template>
