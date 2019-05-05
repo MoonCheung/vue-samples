@@ -55,6 +55,18 @@ export default new Router({
     {
       path: '/ProvideAndInject',
       component: () => import('./pages/basis/ProvideAndInject')
+    },
+    {
+      path: '/TempleteAndJSX',
+      component: () => import('./pages/basis/TempleteAndJSX')
+    },
+    {
+      path: '/vuex_example',
+      component: () => import('./pages/ecology/example')
+    },
+    {
+      path: '/vuex_example1',
+      component: () => import('./pages/ecology/example1')
     }
   ]
 })

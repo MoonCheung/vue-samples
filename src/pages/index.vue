@@ -2,7 +2,7 @@
   <div class="home">
     <img alt="Vue logo"
          src="../assets/logo.png">
-    <p>{{ massage }}</p>
+    <p>{{ msg }}</p>
     <ul class="list">
       <li>
         <router-link to='/vIf'>vIf&vElse&vShow 实例</router-link>
@@ -37,6 +37,18 @@
       <li>
         <router-link to='/ProvideAndInject'>常用特性Provide与Inject</router-link>
       </li>
+      <li>
+        <router-link to='/TempleteAndJSX'>Template和JSX对比以及其本质</router-link>
+      </li>
+    </ul>
+    <p>{{ vuex_msg }}</p>
+    <ul>
+      <li>
+        <router-link to="/vuex_example">Vuex Demo</router-link>
+      </li>
+      <li>
+        <router-link to="/vuex_example1">Vuex 核心底层原理</router-link>
+      </li>
     </ul>
   </div>
 </template>
@@ -46,7 +58,8 @@ export default {
   name: "Index",
   data() {
     return {
-      massage: "Vue2.0基础"
+      msg: "Vue2.0 基础篇",
+      vuex_msg: "Vuex 生态篇"
     };
   }
 };
