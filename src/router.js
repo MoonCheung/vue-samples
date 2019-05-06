@@ -67,6 +67,10 @@ export default new Router({
     {
       path: '/vuex_example1',
       component: () => import('./pages/ecology/example1')
+    },
+    {
+      path: '/vuex_example2',
+      component: () => import('./pages/ecology/example2')
     }
   ]
 })

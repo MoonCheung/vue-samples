@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: "example",
+  name: "example1",
   computed: {
     count() {
       return this.$store.state.count;

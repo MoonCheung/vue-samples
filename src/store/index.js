@@ -1,12 +1,17 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import cart from './modules/cart'
+import products from './modules/products'
 
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
-  //提供响应式数据
+  // state：使用单一状态树，用一个对象就包含了全部的应用层级状态
   state: {
-    count: 0
+    count: 0,
+    userInfo: {
+      email: 'salvador23@163.com'
+    }
   },
   mutations: {
     increment(state) {
@@ -28,6 +33,10 @@ const store = new Vuex.Store({
     doubleCount(state) {
       return state.count * 2
     }
+  },
+  modules: {
+    cart,
+    products
   }
 });
 

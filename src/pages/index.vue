@@ -44,10 +44,13 @@
     <p>{{ vuex_msg }}</p>
     <ul>
       <li>
-        <router-link to="/vuex_example">Vuex Demo</router-link>
+        <router-link to="/vuex_example">Vuex 基础</router-link>
       </li>
       <li>
         <router-link to="/vuex_example1">Vuex 核心底层原理</router-link>
+      </li>
+      <li>
+        <router-link to="/vuex_example2">基于Vue，Vuex的购物车演示</router-link>
       </li>
     </ul>
   </div>
