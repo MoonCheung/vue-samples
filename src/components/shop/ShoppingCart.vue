@@ -1,18 +1,35 @@
 <template>
   <div class="cart">
-    <h2>清单</h2>
-    <p v-show="!products.length"></p>
-    <i>请添加产品到购物车：</i>
-    <ul>
-      <li v-for="product in products"
-          :key="product.id">
-        产品:{{product.title}} - 价格:{{product.price}} x {{product.quantity}}
-      </li>
-    </ul>
-    <p>合计:{{total}}</p>
-    <p><button :disabled="!products.length"
-              @click="checkout(products)">提交</button></p>
-    <p v-show="checkoutStatus">提交{{checkoutStatus}}!</p>
+    <a-row>
+      <a-col :span="24">
+        <h2>清单</h2>
+        <p v-show="!products.length"></p>
+        <a-form :layout="formLayout">
+          <a-form-item label="请添加产品到购物车"
+                       :label-col="{span: 10}"
+                       :wrapper-col="{span: 4}">
+            <ul>
+              <li v-for="product in products"
+                  :key="product.id">
+                {{product.title}} - 价格:{{product.price}} x {{product.quantity}}
+              </li>
+            </ul>
+          </a-form-item>
+          <a-form-item label="合计"
+                       :label-col="{span: 10}"
+                       :wrapper-col="{span: 4}">
+            <div>{{total}}</div>
+          </a-form-item>
+        </a-form>
+        <p>
+          <a-button type="primary"
+                    :disabled="!products.length"
+                    @click="checkout(products)">提交</a-button>
+        </p>
+        <p v-show="checkoutStatus">提交{{checkoutStatus}}!</p>
+      </a-col>
+    </a-row>
+
   </div>
 </template>
 
@@ -20,6 +37,11 @@
 import { mapState, mapGetters } from "vuex";
 
 export default {
+  data() {
+    return {
+      formLayout: "horizontal"
+    };
+  },
   computed: {
     ...mapState("cart", {
       checkoutStatus: state => state.checkoutStatus

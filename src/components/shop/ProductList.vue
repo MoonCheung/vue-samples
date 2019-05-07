@@ -4,15 +4,21 @@
         :key="product.id">
       {{product.title}} - {{product.price}}
       <br />
-      <div>数量: <select v-model="numbers[product.id]">
-          <option v-for="n in product.inventory"
-                  :key="n"
-                  :value="n">{{n}}</option>
-        </select></div>
-      <button :disabled="!product.inventory"
-              @click="addProductToCart(product)">
-        加入购物车
-      </button>
+      <div>数量:
+        <a-select :defaultValue="product.inventory[0]"
+                  style="width: 80px"
+                  size="small"
+                  v-model="numbers[product.id]">
+          <a-select-option v-for="n in product.inventory"
+                           :key="n"
+                           :value="n">{{n}}
+          </a-select-option>
+        </a-select>&nbsp;&nbsp;
+        <a-button :disabled="!product.inventory"
+                  @click="addProductToCart(product)">
+          加入购物车
+        </a-button>
+      </div>
     </li>
   </ul>
 </template>
