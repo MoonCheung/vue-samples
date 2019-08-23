@@ -11,13 +11,13 @@ export default {
   components: {
     Event
   },
-  data() {
+  data () {
     return {
       name: ""
     };
   },
   methods: {
-    handleEventChange(val) {
+    handleEventChange (val) {
       this.name = val;
     }
   }

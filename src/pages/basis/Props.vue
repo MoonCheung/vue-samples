@@ -19,13 +19,13 @@ export default {
   components: {
     VProps
   },
-  data() {
+  data () {
     return {
       type: "success"
     };
   },
   methods: {
-    handlePropChange(val) {
+    handlePropChange (val) {
       this.type = val;
     }
   }

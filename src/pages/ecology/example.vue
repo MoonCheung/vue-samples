@@ -11,7 +11,7 @@
 export default {
   name: "example",
   computed: {
-    count() {
+    count () {
       return this.$store.state.count;
     }
   }

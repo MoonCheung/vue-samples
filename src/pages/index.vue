@@ -73,7 +73,7 @@
 <script>
 export default {
   name: "Index",
-  data() {
+  data () {
     return {
       msg: "Vue2.0 基础篇",
       vuex_msg: "Vuex 生态篇"

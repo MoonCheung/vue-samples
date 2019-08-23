@@ -1,9 +1,9 @@
-import Vue from "vue";
-import Vuex from "vuex";
-import cart from './modules/cart'
-import products from './modules/products'
+import Vue from 'vue';
+import Vuex from 'vuex';
+import cart from './modules/cart';
+import products from './modules/products';
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 const store = new Vuex.Store({
   // state：使用单一状态树，用一个对象就包含了全部的应用层级状态
@@ -15,23 +15,21 @@ const store = new Vuex.Store({
   },
   mutations: {
     increment(state) {
-      state.count++
+      state.count++;
     }
   },
   actions: {
-    increment({
-      commit
-    }) {
+    increment({ commit }) {
       setTimeout(() => {
         // state.count++; //不要对state进行更改数据，应该通过commit交给mutations去处理
-        commit('increment')
-        console.log('actions 激活')
-      }, 1000)
+        commit('increment');
+        console.log('actions 激活');
+      }, 1000);
     }
   },
   getters: {
     doubleCount(state) {
-      return state.count * 2
+      return state.count * 2;
     }
   },
   modules: {
@@ -40,4 +38,4 @@ const store = new Vuex.Store({
   }
 });
 
-export default store
+export default store;

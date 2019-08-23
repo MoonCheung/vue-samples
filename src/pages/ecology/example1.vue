@@ -9,7 +9,7 @@
 export default {
   name: "example1",
   computed: {
-    count() {
+    count () {
       return this.$store.state.count;
     }
   }

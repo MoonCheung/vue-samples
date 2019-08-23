@@ -22,7 +22,7 @@ export default {
   components: {
     PersonalInfo
   },
-  data() {
+  data () {
     return {
       phoneInfo: {
         areaCode: "+86",

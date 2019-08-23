@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       items: [5, 63, 14, 35, 28, 36, 37],
       students: [
@@ -29,21 +29,21 @@ export default {
     };
   },
   computed: {
-    sortItems: function() {
+    sortItems: function () {
       return this.items.sort((a, b) => a - b);
     },
-    sortStudents: function() {
+    sortStudents: function () {
       let self = this;
       return self.sortByKey(self.students, "age");
     }
   },
-  mounted() {
+  mounted () {
     this.sortByKey();
   },
   methods: {
     //数组对象方法排序：
-    sortByKey(array, key) {
-      return array.sort(function(a, b) {
+    sortByKey (array, key) {
+      return array.sort(function (a, b) {
         let x = a[key];
         let y = b[key];
         return x < y ? -1 : x > y ? 1 : 0;

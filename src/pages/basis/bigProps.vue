@@ -15,25 +15,25 @@ export default {
   components: {
     VBigProps
   },
-  data() {
+  data () {
     return {
       bigPropsName: "Hello 父组件"
     };
   },
   methods: {
-    handleBigPropChange(val) {
+    handleBigPropChange (val) {
       this.bigPropsName = val;
     },
-    getDefault() {
+    getDefault () {
       return [this.$createElement("p", "default slot")];
     },
-    getTitle() {
+    getTitle () {
       return [
         this.$createElement("div", "default slot1"),
         this.$createElement("div", "default slot2")
       ];
     },
-    getScopeItem(props) {
+    getScopeItem (props) {
       return [
         this.$createElement("p", `get item slot-scope ${JSON.stringify(props)}`)
       ];

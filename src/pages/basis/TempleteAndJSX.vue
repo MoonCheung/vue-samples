@@ -1,12 +1,12 @@
 <template>
   <div>
     <div>Message：{{ msg }}</div>
-  <br /> 
-  <VNodes :vnodes="getJSXSpan()"></VNodes>
-  <v-heading1 :level="1">hello js</v-heading1>
-  <v-heading2 :level="2">hello jsx</v-heading2>
-  <v-heading3 :level="3">hello template vue</v-heading3>
-  <VNodes :vnodes="getvHeading4(4)" />
+    <br />
+    <VNodes :vnodes="getJSXSpan()"></VNodes>
+    <v-heading1 :level="1">hello js</v-heading1>
+    <v-heading2 :level="2">hello jsx</v-heading2>
+    <v-heading3 :level="3">hello template vue</v-heading3>
+    <VNodes :vnodes="getvHeading4(4)" />
   </div>
 </template>
 
@@ -31,10 +31,10 @@ export default {
     }
   },
   methods: {
-    getJSXSpan(){
+    getJSXSpan () {
       return <span>VNodes Message：{this.msg}</span>
     },
-    getvHeading4(level){
+    getvHeading4 (level) {
       const Tag = `h${level}`;
       return <Tag>Hello Vue VNodes</Tag>
     }

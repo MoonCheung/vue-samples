@@ -19,7 +19,7 @@ export default {
   components: {
     PropsAndData
   },
-  data() {
+  data () {
     // this.name = name;
     return {
       name: name,
@@ -33,21 +33,21 @@ export default {
   },
   methods: {
     //以下三个匿名函数
-    handleNameChange() {
+    handleNameChange () {
       this.name = "Vue " + new Date().toLocaleDateString();
       console.log(
         "this.name 发生了变化，但是并没有触发子组件更新，",
         this.name
       );
     },
-    handleInfoChange() {
+    handleInfoChange () {
       this.info.nubmer = 1;
       console.log(
         "this.info 发生了变化，但是并没有触发子组件更新，",
         this.info
       );
     },
-    handleListChange() {
+    handleListChange () {
       this.list.push(1, 2, 3);
       console.log(
         "this.list 发生了变化，但是并没有触发子组件更新，",

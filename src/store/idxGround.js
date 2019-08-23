@@ -1,5 +1,5 @@
-import Vue from "vue";
-import VuexGround from "./min-vuex";
+import Vue from 'vue';
+import VuexGround from './min-vuex';
 
 Vue.use(VuexGround);
 
@@ -10,9 +10,9 @@ const store1 = new VuexGround.Store({
   },
   mutations: {
     increment(state) {
-      state.count++
+      state.count++;
     }
   }
 });
 
-export default store1
+export default store1;
