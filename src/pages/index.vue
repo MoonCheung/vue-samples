@@ -44,6 +44,15 @@
             <li>
               <router-link to='/basis/11/TempleteAndJSX'>Template和JSX对比以及其本质</router-link>
             </li>
+            <li>
+              <router-link to='/basis/12/Emit'>$emit子组件向父组件传值</router-link>
+            </li>
+            <li>
+              <router-link to='/basis/13/EmitAndOn'>$emitAnd$on子组件向父组件传值</router-link>
+            </li>
+            <li>
+              <router-link to='/basis/14/AttrsAndList'>$attrsAnd$listeners父子通信</router-link>
+            </li>
           </ul>
           <p>{{ vuex_msg }}</p>
           <ul>

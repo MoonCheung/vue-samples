@@ -67,6 +67,18 @@ export default new Router({
         {
           path: 'TempleteAndJSX',
           component: () => import('./pages/basis/TempleteAndJSX')
+        },
+        {
+          path: 'Emit',
+          component: () => import('./pages/basis/Emit')
+        },
+        {
+          path: 'EmitAndOn',
+          component: () => import('./pages/basis/EmitAndOn')
+        },
+        {
+          path: 'AttrsAndList',
+          component: () => import('./pages/basis/AttrsAndListeners')
         }
       ]
     },

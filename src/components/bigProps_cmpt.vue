@@ -22,17 +22,17 @@ export default {
     name: String,
     onChange: {
       type: Function,
-      default: () => {}
+      default: () => { }
     },
     slotDefault: Array,
     slotTitle: Array,
     slotScopeItem: {
       type: Function,
-      default: () => {}
+      default: () => { }
     }
   },
   methods: {
-    handleChange() {
+    handleChange () {
       this.onChange("Hello 子组件");
     }
   }
