@@ -29,20 +29,20 @@ export default {
     zipCode: String
   },
   methods: {
-    handleAreaCodeChange(e) {
-      // #emit 触发当前实例上的事件。
+    handleAreaCodeChange (e) {
+      // $emit 触发当前实例上的事件。
       this.$emit("change", {
         ...this.phoneInfo,
         areaCode: e.target.value
       });
     },
-    handlePhoneChange(e) {
+    handlePhoneChange (e) {
       this.$emit("change", {
         ...this.phoneInfo,
         phone: e.target.value
       });
     },
-    handleZipCodeChange(e) {
+    handleZipCodeChange (e) {
       this.$emit("update:zipCode", e.target.value);
     }
   }
