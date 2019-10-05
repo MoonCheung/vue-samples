@@ -66,6 +66,18 @@
               <router-link to="/ecology/3/vuex_example2">基于Vue，Vuex的购物车演示</router-link>
             </li>
           </ul>
+          <p>{{actual_msg}}</p>
+          <ul>
+            <li>
+              <router-link to="/chap/1/verifyForm">验证动态表单</router-link>
+            </li>
+          </ul>
+          <p>{{js30_msg}}</p>
+          <ul>
+            <li>
+              <router-link to="/js30/1/drumKit">JS Durm Kit</router-link>
+            </li>
+          </ul>
         </div>
       </a-col>
       <a-col class="gutter-row"
@@ -85,7 +97,9 @@ export default {
   data () {
     return {
       msg: "Vue2.0 基础篇",
-      vuex_msg: "Vuex 生态篇"
+      vuex_msg: "Vuex 生态篇",
+      actual_msg: 'Vue 实战篇',
+      js30_msg: '基于Vue仿JavaScript30'
     };
   },
   props: ["id"]
