@@ -1,12 +1,14 @@
 <template>
   <div>
     <ul>
-      <li v-for="item in sortItems">
+      <li v-for="item in sortItems"
+          :key="item.id">
         {{ item }}
       </li>
     </ul>
     <ul>
-      <li v-for="(student,index) in sortStudents">
+      <li v-for="(student,index) in sortStudents"
+          :key="index">
         {{ index }}:{{ student.name }} -> {{ student.age }}
       </li>
     </ul>
@@ -14,6 +16,16 @@
 </template>
 
 <script>
+
+//用来封装函数：数组对象方法排序
+function sortByKey (array, key) {
+  return array.sort((a, b) => {
+    let x = a[key];
+    let y = b[key];
+    return x < y ? -1 : x > y ? 1 : 0;
+  });
+}
+
 export default {
   data () {
     return {
@@ -33,21 +45,7 @@ export default {
       return this.items.sort((a, b) => a - b);
     },
     sortStudents: function () {
-      let self = this;
-      return self.sortByKey(self.students, "age");
-    }
-  },
-  mounted () {
-    this.sortByKey();
-  },
-  methods: {
-    //数组对象方法排序：
-    sortByKey (array, key) {
-      return array.sort(function (a, b) {
-        let x = a[key];
-        let y = b[key];
-        return x < y ? -1 : x > y ? 1 : 0;
-      });
+      return sortByKey(this.students, "age");
     }
   }
 };
