@@ -7,7 +7,7 @@
         <a-form :layout="formLayout">
           <a-form-item label="请添加产品到购物车"
                        :label-col="{span: 10}"
-                       :wrapper-col="{span: 4}">
+                       :wrapper-col="{span: 8}">
             <ul>
               <li v-for="product in products"
                   :key="product.id">
@@ -17,7 +17,7 @@
           </a-form-item>
           <a-form-item label="合计"
                        :label-col="{span: 10}"
-                       :wrapper-col="{span: 4}">
+                       :wrapper-col="{span: 8}">
             <div>{{total}}</div>
           </a-form-item>
         </a-form>
@@ -37,7 +37,7 @@
 import { mapState, mapGetters } from "vuex";
 
 export default {
-  data() {
+  data () {
     return {
       formLayout: "horizontal"
     };
@@ -52,7 +52,7 @@ export default {
     })
   },
   methods: {
-    checkout(products) {
+    checkout (products) {
       // console.log(products);
       this.$store.dispatch("cart/checkout", products);
     }
