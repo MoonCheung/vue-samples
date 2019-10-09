@@ -4,8 +4,8 @@
     <input :value="name"
            @change="handleChange" /><br />
     <div @click="handleDivChick">
-      <button @chick="handleChick">重置成功</button>
-      <button @click.stop="handleChick">重置失败</button>
+      <a-button @chick="handleChick">重置成功</a-button>
+      <a-button @click.stop="handleChick">重置失败</a-button>
     </div>
   </div>
 </template>
@@ -17,13 +17,13 @@ export default {
     name: String
   },
   methods: {
-    handleChange(e) {
+    handleChange (e) {
       this.$emit("change", e.target.value);
     },
-    handleDivChick() {
+    handleDivChick () {
       this.$emit("change", "");
     },
-    handleChick(e) {
+    handleChick (e) {
       // 都会失败
       e.stopPropagation();
     }

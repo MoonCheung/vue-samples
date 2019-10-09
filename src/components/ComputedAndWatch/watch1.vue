@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       fullName: "Foo Bar",
       firstName: "Foo",
@@ -16,10 +16,10 @@ export default {
     };
   },
   watch: {
-    firstName: function(val) {
+    firstName: function (val) {
       this.fullName = val + " " + this.lastName;
     },
-    lastName: function(val) {
+    lastName: function (val) {
       this.fullName = this.firstName + " " + val;
     }
   }

@@ -1,7 +1,7 @@
 <template>
   <div class="center">
     2.我的岁数是{{age}}
-    <button @click="childEmit">我给C组件赋值</button>
+    <a-button @click="childEmit">我给C组件赋值</a-button>
   </div>
 </template>
 

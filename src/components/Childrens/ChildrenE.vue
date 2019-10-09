@@ -2,7 +2,7 @@
   <div class="border2">
     <h3 class="newColor"
         :style="{color: theme.color}">E 节点</h3>
-    <button @click="handleChild()">子节点改变为orange</button>
+    <a-button @click="handleChild()">子节点改变为orange</a-button>
   </div>
 </template>
 
@@ -11,11 +11,11 @@ export default {
   inject: {
     theme: {
       from: "theme",
-      default: () => {}
+      default: () => { }
     }
   },
   methods: {
-    handleChild() {
+    handleChild () {
       if (this.theme.color) {
         let h3 = document.getElementsByClassName("newColor")["0"];
         h3.style.color = "orange";

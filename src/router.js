@@ -7,8 +7,7 @@ Vue.use(Router);
 export default new Router({
   mode: 'history',
   base: __dirname,
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'index',
       component: Index
@@ -19,8 +18,7 @@ export default new Router({
       props: true,
       component: Index,
       // children选项里component属性相应引入组件会被渲染在 Index 的 <router-view/> 中
-      children: [
-        {
+      children: [{
           path: 'vIf',
           component: () => import('./pages/basis/vIf')
         },
@@ -83,13 +81,23 @@ export default new Router({
       ]
     },
     {
+      path: '/vue3_basis/:id',
+      name: 'vue3_basis',
+      props: true,
+      component: Index,
+      // children选项里component属性相应引入组件会被渲染在 Index 的 <router-view/> 中
+      children: [{
+        path: 'setup',
+        component: () => import('./pages/vue3_basis/setup')
+      }]
+    },
+    {
       path: '/ecology/:id',
       name: 'ecology',
       props: true,
       component: Index,
       // children选项里component属性相应引入组件会被渲染在 Index 的 <router-view/> 中
-      children: [
-        {
+      children: [{
           path: 'vuex_example',
           component: () => import('./pages/ecology/example')
         },
@@ -108,24 +116,20 @@ export default new Router({
       name: 'chap',
       props: true,
       component: Index,
-      children: [
-        {
-          path: 'verifyForm',
-          component: () => import('./pages/actual/verifyForm')
-        }
-      ]
+      children: [{
+        path: 'verifyForm',
+        component: () => import('./pages/actual/verifyForm')
+      }]
     },
     {
       path: '/js30/:id',
       name: 'js30',
       props: true,
       component: Index,
-      children: [
-        {
-          path: 'drumKit',
-          component: () => import('./pages/javaScript30/durmKit')
-        }
-      ]
+      children: [{
+        path: 'drumKit',
+        component: () => import('./pages/javaScript30/durmKit')
+      }]
     }
   ]
 });

@@ -4,9 +4,9 @@
     <p>Reversed messaged2: "{{ reversedMessage2() }}"</p>
     <p>{{ now }}</p>
     <!-- $forceUpdate() 迫使 Vue 实例重新渲染。-->
-    <button @click="() => $forceUpdate()">强制更新</button>
+    <a-button @click="() => $forceUpdate()">强制更新</a-button>
     <br /><br />
-    <input v-model="message" />
+    <a-input v-model="message" />
   </div>
 </template>
 

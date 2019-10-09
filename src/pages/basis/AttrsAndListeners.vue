@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <button @click="parentReduce">父组件减量</button>
+    <a-button @click="parentReduce">父组件减量</a-button>
     <child-a :attrs-c="c"
              :attrs-b="b"
              :attrs-a="a"

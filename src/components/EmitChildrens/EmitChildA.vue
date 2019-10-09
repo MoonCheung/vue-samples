@@ -1,7 +1,7 @@
 <template>
   <div class="center">
     1.我的名字是{{name}}
-    <button @click="childEmit">我给C组件赋值</button>
+    <a-button @click="childEmit">我给C组件赋值</a-button>
   </div>
 </template>
 

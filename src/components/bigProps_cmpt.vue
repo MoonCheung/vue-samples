@@ -1,7 +1,7 @@
 <template>
   <div>
     {{ name }}<br />
-    <button @click="handleChange">改变名称</button><br />
+    <a-button @click="handleChange">改变名称</a-button><br />
     <!-- {{ slotDefault }} -->
     <VNodes :vnodes="slotDefault" /><br />
     <VNodes :vnodes="slotTitle" /><br />

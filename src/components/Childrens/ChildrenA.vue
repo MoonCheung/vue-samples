@@ -1,8 +1,8 @@
 <template>
   <div class="border">
     <h1>A节点</h1>
-    <button @click="changeColor()">改变Color</button><br />
-    <button @click="getH3Child">获取I h3 Ref</button>
+    <a-button @click="changeColor()">改变Color</a-button><br />
+    <a-button @click="getH3Child">获取I h3 Ref</a-button>
     <ChildrenB />
     <ChildrenC />
     <ChildrenD />
@@ -20,12 +20,12 @@ export default {
     ChildrenC,
     ChildrenD
   },
-  data() {
+  data () {
     return {
       color: "blue"
     };
   },
-  provide() {
+  provide () {
     return {
       themes: this,
       theme: {
@@ -43,14 +43,14 @@ export default {
     };
   },
   methods: {
-    changeColor(color) {
+    changeColor (color) {
       if (color) {
         this.color = color;
       } else {
         this.color = this.color === "blue" ? "red" : "blue";
       }
     },
-    getH3Child() {
+    getH3Child () {
       console.log(this.childrenI);
     }
   }

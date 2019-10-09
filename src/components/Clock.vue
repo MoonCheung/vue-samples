@@ -2,7 +2,7 @@
   <div>
     {{log('render')}}
     {{ now }},次数:{{ number }}
-    <button @click="start = !start">{{start? '停止' : '开始'}}</button>
+    <a-button @click="start = !start">{{start? '停止' : '开始'}}</a-button>
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
   props: {
     number: Number
   },
-  data: function() {
+  data: function () {
     console.log("data");
     this.moment = moment;
     this.log = window.console.log;
@@ -24,38 +24,38 @@ export default {
   },
   //用来侦查响应数据的变化
   watch: {
-    start() {
+    start () {
       this.startClock();
     }
   },
-  beforeCreate() {
+  beforeCreate () {
     console.log("beforeCreate");
   },
-  created() {
+  created () {
     console.log("created");
   },
-  beforeMount() {
+  beforeMount () {
     console.log("beforeMount");
   },
-  mounted() {
+  mounted () {
     console.log("beforeMount");
     this.startClock();
   },
-  beforeUpdate() {
+  beforeUpdate () {
     console.log("beforeUpdate");
   },
-  updated() {
+  updated () {
     console.log("updated");
   },
-  beforeDestroy() {
+  beforeDestroy () {
     console.log("beforeDestroy");
     clearInterval(this.clockInterval);
   },
-  destroyed() {
+  destroyed () {
     console.log("destroyed");
   },
   methods: {
-    startClock() {
+    startClock () {
       clearInterval(this.clockInterval);
       if (this.start) {
         this.clockInterval = setInterval(() => {

@@ -6,6 +6,8 @@ import storeGround from './store/idxGround';
 import DatePicker from 'ant-design-vue';
 import ref from 'vue-ref';
 import 'ant-design-vue/dist/antd.css';
+import VueCompositionApi from '@vue/composition-api';
+
 
 Vue.config.productionTip = false;
 // Vue 核心底层原理
@@ -13,6 +15,7 @@ Vue.prototype.$store = storeGround;
 
 Vue.use(DatePicker);
 Vue.use(ref);
+Vue.use(VueCompositionApi);
 
 new Vue({
   router,

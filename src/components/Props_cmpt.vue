@@ -8,7 +8,7 @@
     <br />
     isVisible: {{ isVisible }}
     <br />
-    <button @click="handleClick">改变类型</button>
+    <a-button @click="handleClick">改变类型</a-button>
   </div>
 </template>
 

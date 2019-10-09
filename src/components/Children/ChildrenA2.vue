@@ -2,9 +2,9 @@
   <div class="border">
     <Children v-for="key in list"
               :key="key">
-      <button @click="() => handleDelete(key)">删除</button>
+      <a-button @click="() => handleDelete(key)">删除</a-button>
     </Children>
-    <button @click="handleAdd">添加</button>
+    <a-button @click="handleAdd">添加</a-button>
   </div>
 </template>
 
@@ -15,18 +15,18 @@ export default {
   components: {
     Children
   },
-  data() {
+  data () {
     return {
       list: []
     };
   },
   methods: {
-    handleDelete(key) {
+    handleDelete (key) {
       const index = this.list.findIndex(k => k === key);
       console.log(index);
       this.list.splice(index, 1);
     },
-    handleAdd() {
+    handleAdd () {
       this.list.push(key++);
     }
   }

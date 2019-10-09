@@ -1,14 +1,14 @@
 <template>
   <div class="border2">
-    <input v-model="phone"
-           type="number" />
+    <a-input v-model="phone"
+             type="number" />
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       phone: ""
     };

@@ -2,7 +2,7 @@
   <div class="center">
     <div>ChildB:{{attrsB}}</div>
     <div>ChildB的$attrs:{{$attrs}}</div>
-    <button @click="this.reduceB">组件B减量</button>
+    <a-button @click="this.reduceB">组件B减量</a-button>
     <child-c v-bind="$attrs"></child-c>
   </div>
 </template>

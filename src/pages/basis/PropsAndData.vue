@@ -1,9 +1,9 @@
 <template>
   <div>
     <p>
-      <button @click="handleNameChange">改变 this.name</button>
-      <button @click="handleInfoChange">改变 this.info</button>
-      <button @click="handleListChange">改变 this.list</button>
+      <a-button @click="handleNameChange">改变 this.name</a-button>
+      <a-button @click="handleInfoChange">改变 this.info</a-button>
+      <a-button @click="handleListChange">改变 this.list</a-button>
     </p>
     <props-and-data :name="name"
                     :info="info"

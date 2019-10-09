@@ -54,6 +54,12 @@
               <router-link to='/basis/14/AttrsAndList'>$attrsAnd$listeners父子通信</router-link>
             </li>
           </ul>
+          <p>{{ vue3_msg }}</p>
+          <ul>
+            <li>
+              <router-link to="/vue3_basis/1/setup">setup 实例</router-link>
+            </li>
+          </ul>
           <p>{{ vuex_msg }}</p>
           <ul>
             <li>
@@ -96,7 +102,8 @@ export default {
   name: "Index",
   data () {
     return {
-      msg: "Vue2.0 基础篇",
+      msg: "Vue2 基础篇",
+      vue3_msg: 'Vue3 基础篇',
       vuex_msg: "Vuex 生态篇",
       actual_msg: 'Vue 实战篇',
       js30_msg: '基于Vue仿JavaScript30'

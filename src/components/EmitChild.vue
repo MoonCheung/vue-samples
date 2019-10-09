@@ -1,6 +1,6 @@
 <template>
   <div class="center">
-    <button @click="childTitle">我是给父组件传值</button>
+    <a-button @click="childTitle">我是给父组件传值</a-button>
   </div>
 </template>
 
