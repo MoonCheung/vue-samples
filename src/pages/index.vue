@@ -53,6 +53,9 @@
             <li>
               <router-link to='/basis/14/AttrsAndList'>$attrsAnd$listeners父子通信</router-link>
             </li>
+            <li>
+              <router-link to='/basis/15/nextTick'>$nextTick 实例</router-link>
+            </li>
           </ul>
           <p>{{ vue3_msg }}</p>
           <ul>

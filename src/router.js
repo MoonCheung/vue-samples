@@ -77,6 +77,10 @@ export default new Router({
         {
           path: 'AttrsAndList',
           component: () => import('./pages/basis/AttrsAndListeners')
+        },
+        {
+          path: 'nextTick',
+          component: () => import('./pages/basis/nextTick')
         }
       ]
     },
