@@ -14,7 +14,10 @@
 export default {
   name: "EventDemo",
   props: {
-    name: String
+    name: {
+      type: String,
+      default: ''
+    }
   },
   methods: {
     handleChange (e) {
