@@ -3,7 +3,7 @@
     <div class="controls">
       <label for="spacing">Spacing:</label>
       <input type="range"
-             ref="range"
+             ref="spacings"
              name="spacing"
              min="10"
              max="200"
@@ -12,7 +12,7 @@
 
       <label for="blur">Blur:</label>
       <input type="range"
-             ref="range"
+             ref="blurs"
              name="blur"
              min="0"
              max="25"
@@ -21,7 +21,7 @@
 
       <label for="base">Base Color:</label>
       <input type="color"
-             ref="range"
+             ref="bases"
              name="base"
              value="#ffc600">
     </div>
@@ -44,10 +44,17 @@ export default {
       inputs.forEach(input => input.addEventListener('mousemove', this.handleUpdate));
     },
     handleUpdate: function () {
-      const suffix = this.$refs.range.dataset.sizing || '';
-      let name = this.$refs.range.name
-      let value = this.$refs.range.value
-      document.documentElement.style.setProperty(`--${name}`, value + suffix);
+      const suffix1 = this.$refs.spacings.dataset.sizing || '';
+      const suffix2 = this.$refs.blurs.dataset.sizing || '';
+      let spaName = this.$refs.spacings.name
+      let blurName = this.$refs.blurs.name
+      let baseName = this.$refs.bases.name
+      let spaVal = this.$refs.spacings.value
+      let blurVal = this.$refs.blurs.value
+      let baseVal = this.$refs.bases.value
+      document.documentElement.style.setProperty(`--${spaName}`, spaVal + suffix1);
+      document.documentElement.style.setProperty(`--${blurName}`, blurVal + suffix2);
+      document.documentElement.style.setProperty(`--${baseName}`, baseVal);
     }
   }
 }
