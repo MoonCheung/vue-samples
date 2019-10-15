@@ -86,6 +86,12 @@
             <li>
               <router-link to="/js30/1/drumKit">JS Durm Kit</router-link>
             </li>
+            <li>
+              <router-link to="/js30/2/clock">JS Clock</router-link>
+            </li>
+            <li>
+              <router-link to="/js30/3/variable">JS Variable</router-link>
+            </li>
           </ul>
         </div>
       </a-col>

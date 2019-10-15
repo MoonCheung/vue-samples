@@ -115,6 +115,10 @@ export default {
   font-size: 10px;
   background: url(http://i.imgur.com/b9r5sEL.jpg) bottom center;
   background-size: cover;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
 }
 
 .keys {
