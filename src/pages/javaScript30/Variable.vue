@@ -33,7 +33,7 @@
 
 <script>
 export default {
-  name: "Variable",
+  name: "Variables",
   mounted () {
     this.handleInpute();
   },

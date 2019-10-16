@@ -132,16 +132,20 @@ export default new Router({
       component: Index,
       children: [{
         path: 'drumKit',
-        name: 'DurmKit',
+        name: 'DurmKits',
         component: () => import('./pages/javaScript30/DurmKit')
       }, {
         path: 'clock',
-        name: 'Clock',
+        name: 'Clocks',
         component: () => import('./pages/javaScript30/Clock')
       }, {
         path: 'variable',
-        name: 'Variable',
+        name: 'Variables',
         component: () => import('./pages/javaScript30/Variable')
+      }, {
+        path: 'flexPanel',
+        name: 'FlexPanels',
+        component: () => import('./pages/javaScript30/FlexPanel')
       }]
     }
   ]
