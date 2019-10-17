@@ -6,8 +6,7 @@
         <div class="gutter-box">
           <img alt="Vue logo"
                src="../assets/logo.png">
-          <a-collapse defaultActiveKey="1"
-                      :bordered="false">
+          <a-collapse :bordered="false">
             <template v-slot:expandIcon="props">
               <a-icon type="caret-right"
                       :rotate="props.isActive ? 90 : 0" />
@@ -113,7 +112,7 @@
                   <router-link to="/js30/3/variable">JS Variable</router-link>
                 </li>
                 <li>
-                  <router-link to="/js30/3/flexPanel">JS FlexPanel</router-link>
+                  <router-link to="/js30/4/flexPanel">JS FlexPanel</router-link>
                 </li>
               </ul>
             </a-collapse-panel>
@@ -127,7 +126,6 @@
         </div>
       </a-col>
     </a-row>
-
   </div>
 </template>
 
