@@ -146,6 +146,10 @@ export default new Router({
         path: 'flexPanel',
         name: 'FlexPanels',
         component: () => import('./pages/javaScript30/FlexPanel')
+      }, {
+        path: 'typeAhead',
+        name: 'TypeAheads',
+        component: () => import('./pages/javaScript30/TypeAhead')
       }]
     }
   ]

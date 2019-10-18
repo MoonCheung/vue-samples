@@ -114,6 +114,9 @@
                 <li>
                   <router-link to="/js30/4/flexPanel">JS FlexPanel</router-link>
                 </li>
+                <li>
+                  <router-link to="/js30/5/typeAhead">JS TypeAhead</router-link>
+                </li>
               </ul>
             </a-collapse-panel>
           </a-collapse>
