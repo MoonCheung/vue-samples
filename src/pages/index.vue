@@ -96,6 +96,9 @@
                 <li>
                   <router-link to="/chap/1/verifyForm">验证动态表单</router-link>
                 </li>
+                <li>
+                  <router-link to="/chap/2/pdf">生成PDF文件</router-link>
+                </li>
               </ul>
             </a-collapse-panel>
             <a-collapse-panel :header="js30_msg"

@@ -122,7 +122,12 @@ export default new Router({
       component: Index,
       children: [{
         path: 'verifyForm',
+        name: 'Form',
         component: () => import('./pages/actual/verifyForm')
+      }, {
+        path: 'pdf',
+        name: 'HTMLToPDF',
+        component: () => import('./pages/actual/htmlToPdf')
       }]
     },
     {
