@@ -4,7 +4,7 @@
  * @Github: https://github.com/MoonCheung
  * @Date: 2019-10-21 22:21:11
  * @LastEditors: MoonCheung
- * @LastEditTime: 2019-10-21 22:41:08
+ * @LastEditTime: 2019-10-22 00:31:15
  */
 
 import html2Canvas from 'html2canvas'
