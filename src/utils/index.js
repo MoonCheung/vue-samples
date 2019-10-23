@@ -4,7 +4,7 @@
  * @Github: https://github.com/MoonCheung
  * @Date: 2019-10-21 22:40:10
  * @LastEditors: MoonCheung
- * @LastEditTime: 2019-10-21 22:46:48
+ * @LastEditTime: 2019-10-22 12:10:26
  */
 
 import htmlToPdf from './pdf';
