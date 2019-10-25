@@ -11,7 +11,7 @@
                placheholder="城市或国家" />
       <ul ref="suggestions"
           class="suggestions">
-        <li>筛选城市或国家</li>
+        <li class="sug_item">筛选城市或国家</li>
       </ul>
     </form>
   </div>
@@ -56,7 +56,7 @@ export default {
         const cityname = place.city.replace(regex, `<span class='hl'>${this.value}</span>`)
         const statename = place.state.replace(regex, `<span class='hl'>${this.value}</span>`)
         return `
-          <li>
+          <li class="sug_item">
             <span class="name">${cityname},${statename}</span>
             <span class="population">${this.numberWithCommas(place.population)}</span>
           </li>
@@ -87,7 +87,7 @@ input {
   margin: 50px auto;
 }
 
-input.search {
+.search {
   margin: 0;
   text-align: center;
   outline: 0;
@@ -109,7 +109,7 @@ input.search {
   /*perspective:20px;*/
 }
 
-.suggestions li {
+.suggestions .sug_item {
   background: white;
   list-style: none;
   border-bottom: 1px solid #d8d8d8;
@@ -122,12 +122,12 @@ input.search {
   text-transform: capitalize;
 }
 
-.suggestions li:nth-child(even) {
+.suggestions .sug_item:nth-child(even) {
   transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
   background: linear-gradient(to bottom, #ffffff 0%, #efefef 100%);
 }
 
-.suggestions li:nth-child(odd) {
+.suggestions .sug_item:nth-child(odd) {
   transform: perspective(100px) rotateX(-3deg) translateY(3px);
   background: linear-gradient(to top, #ffffff 0%, #efefef 100%);
 }
@@ -167,11 +167,5 @@ span.title {
 
 .love {
   text-align: center;
-}
-
-a {
-  color: black;
-  background: rgba(0, 0, 0, 0.1);
-  text-decoration: none;
 }
 </style>
