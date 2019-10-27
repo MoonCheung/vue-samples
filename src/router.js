@@ -155,6 +155,10 @@ export default new Router({
         path: 'typeAhead',
         name: 'TypeAheads',
         component: () => import('./pages/javaScript30/TypeAhead')
+      }, {
+        path: 'H5Canvas',
+        name: 'HTML5Canvas',
+        component: () => import('./pages/javaScript30/H5Canvas')
       }]
     }
   ]

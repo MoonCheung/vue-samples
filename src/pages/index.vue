@@ -120,6 +120,9 @@
                 <li>
                   <router-link to="/js30/5/typeAhead">JS TypeAhead</router-link>
                 </li>
+                <li>
+                  <router-link to="/js30/6/H5Canvas">JS H5Canvas</router-link>
+                </li>
               </ul>
             </a-collapse-panel>
           </a-collapse>
