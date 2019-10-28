@@ -159,6 +159,10 @@ export default new Router({
         path: 'H5Canvas',
         name: 'HTML5Canvas',
         component: () => import('./pages/javaScript30/H5Canvas')
+      }, {
+        path: 'CheckBox',
+        name: 'CheckBoxs',
+        component: () => import('./pages/javaScript30/CheckBox')
       }]
     }
   ]
