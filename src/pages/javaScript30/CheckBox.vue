@@ -2,41 +2,12 @@
   <div class="checkBox_bg">
     <div ref="inboxs"
          class="inbox">
-      <div class="item">
-        <input type="checkbox">
-        <p>This is an inbox layout.</p>
-      </div>
-      <div class="item">
-        <input type="checkbox">
-        <p>Check one item</p>
-      </div>
-      <div class="item">
-        <input type="checkbox">
-        <p>Hold down your Shift key</p>
-      </div>
-      <div class="item">
-        <input type="checkbox">
-        <p>Check a lower item</p>
-      </div>
-      <div class="item">
-        <input type="checkbox">
-        <p>Everything inbetween should also be set to checked</p>
-      </div>
-      <div class="item">
-        <input type="checkbox">
-        <p>Try do it with out any libraries</p>
-      </div>
-      <div class="item">
-        <input type="checkbox">
-        <p>Just regular JavaScript</p>
-      </div>
-      <div class="item">
-        <input type="checkbox">
-        <p>Good Luck!</p>
-      </div>
-      <div class="item">
-        <input type="checkbox">
-        <p>Don't forget to tweet your result!</p>
+      <div class="item"
+           v-for="item in arrays"
+           :key="item.id">
+        <input ref="checkboxes"
+               type="checkbox">
+        <p>{{item.name}}</p>
       </div>
     </div>
   </div>
@@ -45,8 +16,45 @@
 <script>
 export default {
   name: 'CheckBoxs',
+  data () {
+    return {
+      arrays: [
+        { id: '0', name: 'This is an inbox layout.' },
+        { id: '1', name: 'Check one item' },
+        { id: '2', name: 'Hold down your Shift key' },
+        { id: '3', name: 'Check a lower item' },
+        { id: '4', name: 'Everything inbetween should also be set to checked' },
+        { id: '5', name: 'Try do it with out any libraries' },
+        { id: '6', name: 'Just regular JavaScript' },
+        { id: '7', name: 'Good Luck!' },
+        { id: '8', name: "Don't forget to tweet your result!" }
+      ],
+      checkeds: true
+    }
+  },
   mounted () {
-    console.log('ref:', this.$refs.inboxs.childNodes.childNodes);
+    this.$refs.checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('click', this.handleCheck)
+    })
+  },
+  methods: {
+    handleCheck (e) {
+      let inBetween = false;
+      let lastChecked; //undefined
+      if (e.shiftKey && this.checkeds) {
+        this.$refs.checkboxes.forEach(checkbox => {
+          if (checkbox === this || checkbox === lastChecked) {
+            console.log('在两者之间进行检查！');
+            inBetween = !inBetween;
+          }
+
+          if (inBetween) {
+            checkbox.checked = true;
+          }
+        });
+      }
+      lastChecked = this;
+    }
   }
 }
 </script>
