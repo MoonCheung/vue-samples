@@ -160,9 +160,13 @@ export default new Router({
         name: 'HTML5Canvas',
         component: () => import('./pages/javaScript30/H5Canvas')
       }, {
-        path: 'CheckBox',
+        path: 'checkBox',
         name: 'CheckBoxs',
         component: () => import('./pages/javaScript30/CheckBox')
+      }, {
+        path: 'scroll',
+        name: 'SlideScrolls',
+        component: () => import('./pages/javaScript30/SlideScroll')
       }]
     }
   ]
