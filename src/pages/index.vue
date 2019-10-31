@@ -129,6 +129,12 @@
                 <li>
                   <router-link to="/js30/8/scroll">JS SlideAndScroll</router-link>
                 </li>
+                <li>
+                  <router-link to="/js30/9/shadow">JS Move Shadow</router-link>
+                </li>
+                <li>
+                  <router-link to="/js30/10/notArt">JS Not Articles</router-link>
+                </li>
               </ul>
             </a-collapse-panel>
           </a-collapse>

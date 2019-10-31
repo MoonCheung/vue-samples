@@ -167,6 +167,14 @@ export default new Router({
         path: 'scroll',
         name: 'SlideScrolls',
         component: () => import('./pages/javaScript30/SlideScroll')
+      }, {
+        path: 'shadow',
+        name: 'Shadows',
+        component: () => import('./pages/javaScript30/Shadow')
+      }, {
+        path: 'notArt',
+        name: 'NotArticles',
+        component: () => import('./pages/javaScript30/NotArticle')
       }]
     }
   ]
