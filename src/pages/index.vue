@@ -135,6 +135,12 @@
                 <li>
                   <router-link to="/js30/10/notArt">JS Not Articles</router-link>
                 </li>
+                <li>
+                  <router-link to="/js30/11/geo">JS Geolocation</router-link>
+                </li>
+                <li>
+                  <router-link to="/js30/12/linkHigh">JS Link Highlight</router-link>
+                </li>
               </ul>
             </a-collapse-panel>
           </a-collapse>

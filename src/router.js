@@ -175,6 +175,14 @@ export default new Router({
         path: 'notArt',
         name: 'NotArticles',
         component: () => import('./pages/javaScript30/NotArticle')
+      }, {
+        path: 'geo',
+        name: 'Geo',
+        component: () => import('./pages/javaScript30/Geolocation')
+      }, {
+        path: 'linkHigh',
+        name: 'LinkHighlight',
+        component: () => import('./pages/javaScript30/LinkHigh')
       }]
     }
   ]
