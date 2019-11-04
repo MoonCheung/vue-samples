@@ -141,6 +141,9 @@
                 <li>
                   <router-link to="/js30/12/linkHigh">JS Link Highlight</router-link>
                 </li>
+                <li>
+                  <router-link to="/js30/13/speech">JS Speech Synthesis</router-link>
+                </li>
               </ul>
             </a-collapse-panel>
           </a-collapse>

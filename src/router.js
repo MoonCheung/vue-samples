@@ -183,6 +183,10 @@ export default new Router({
         path: 'linkHigh',
         name: 'LinkHighlight',
         component: () => import('./pages/javaScript30/LinkHigh')
+      }, {
+        path: 'speech',
+        name: 'Speechs',
+        component: () => import('./pages/javaScript30/Speech')
       }]
     }
   ]
