@@ -35,30 +35,53 @@ export default {
   data () {
     return {
       voices: [],
-      synth: {}
+      synth: {},
+      msg: {}
     }
   },
   mounted () {
-    this.getSupportVoice();
+    this.$nextTick(() => {
+      //下次DOM更新
+      this.synth = window.speechSynthesis;
+      this.msg = new SpeechSynthesisUtterance();
+      this.getSupportVoice();
+      this.msg.text = '你能说中文吗?';
+    });
+    const options = document.querySelectorAll('[type="range"],[name="text"]');
+    options.forEach(opt => opt.addEventListener('change', this.paramChange))
+    this.$refs.speak.addEventListener('click', this.speak)
+    this.$refs.stop.addEventListener('click', this.stopSpeak)
   },
   methods: {
     getSupportVoice: function () {
-      let synth = window.speechSynthesis;
-      this.voices = synth.getVoices();
-      this.synth = synth;
+      this.voices = this.synth.getVoices();
       for (let i = 0; i < this.voices.length; i++) {
         let option = document.createElement('option');
         option.textContent = this.voices[i].name + ' (' + this.voices[i].lang + ') ';
 
         //默认语言
         if (this.voices[i].default) {
-          option.textContent = ' -- DEFAULT';
+          option.textContent += ' -- DEFAULT';
         }
 
         option.setAttribute('data-name', this.voices[i].name);
         option.setAttribute('data-lang', this.voices[i].lang);
         this.$refs.voices.appendChild(option)
       }
+    },
+    // 点击speak按钮时阅读文字
+    speak: function () {
+      console.log('speak:', this.$refs.voices.value);
+      this.synth.speak(this.msg)
+    },
+    // 停止阅读
+    stopSpeak: function () {
+      this.synth.cancel();
+    },
+    // 阅读参数发生变化
+    paramChange: function (e) {
+      this.msg[e.path[0].name] = e.path[0].value;
+      console.log(`name || value:`, e.path[0].name, e.path[0].value)
     }
   }
 }
