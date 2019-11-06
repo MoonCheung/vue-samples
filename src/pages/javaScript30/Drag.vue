@@ -53,7 +53,7 @@ export default {
       //阻止默认行为
       e.preventDefault();
       let slider = this.$refs.items;
-      // 当鼠标点击按钮移动离开时会返回停止
+      // 当鼠标未按下按钮时会返回停止操作
       if (!this.isMouseDown) {
         return;
       }
