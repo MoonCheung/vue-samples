@@ -144,6 +144,9 @@
                 <li>
                   <router-link to="/js30/13/speech">JS Speech Synthesis</router-link>
                 </li>
+                <li>
+                  <router-link to="/js30/14/drag">JS Click And Drag</router-link>
+                </li>
               </ul>
             </a-collapse-panel>
           </a-collapse>

@@ -187,6 +187,10 @@ export default new Router({
         path: 'speech',
         name: 'Speechs',
         component: () => import('./pages/javaScript30/Speech')
+      }, {
+        path: 'drag',
+        name: 'Drags',
+        component: () => import('./pages/javaScript30/Drag')
       }]
     }
   ]
