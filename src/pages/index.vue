@@ -147,6 +147,9 @@
                 <li>
                   <router-link to="/js30/14/drag">JS Click And Drag</router-link>
                 </li>
+                <li>
+                  <router-link to="/js30/15/video">JS Video Speed Controller</router-link>
+                </li>
               </ul>
             </a-collapse-panel>
           </a-collapse>

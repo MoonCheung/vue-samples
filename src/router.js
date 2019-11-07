@@ -191,6 +191,10 @@ export default new Router({
         path: 'drag',
         name: 'Drags',
         component: () => import('./pages/javaScript30/Drag')
+      }, {
+        path: 'video',
+        name: 'Videos',
+        component: () => import('./pages/javaScript30/Video')
       }]
     }
   ]
