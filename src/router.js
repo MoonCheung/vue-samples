@@ -195,6 +195,10 @@ export default new Router({
         path: 'video',
         name: 'Videos',
         component: () => import('./pages/javaScript30/Video')
+      }, {
+        path: 'timer',
+        name: 'Timers',
+        component: () => import('./pages/javaScript30/Timer')
       }]
     }
   ]

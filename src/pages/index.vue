@@ -150,6 +150,9 @@
                 <li>
                   <router-link to="/js30/15/video">JS Video Speed Controller</router-link>
                 </li>
+                <li>
+                  <router-link to="/js30/16/timer">JS Countdown Timer</router-link>
+                </li>
               </ul>
             </a-collapse-panel>
           </a-collapse>
