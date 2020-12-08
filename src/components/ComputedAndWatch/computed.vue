@@ -12,37 +12,36 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      message: "Hellow Message"
+      message: 'Hellow Message'
     };
   },
   //计算属性
   computed: {
     //面向字面量方法
-    reversedMessage1: function () {
-      console.log("执行reversedMessage1!!!");
+    reversedMessage1: function() {
+      console.log('执行reversedMessage1!!!');
       return this.message
-        .split("")
+        .split('')
         .reverse()
-        .join("");
+        .join('');
     },
-    now: function () {
+    now: function() {
       return new Date().toLocaleDateString();
     }
   },
   //该方法被混入vue实例里面
   methods: {
-    reversedMessage2: function () {
-      console.log("执行reversedMessage2!!!");
+    reversedMessage2: function() {
+      console.log('执行reversedMessage2!!!');
       return this.message
-        .split("")
+        .split('')
         .reverse()
-        .join("");
+        .join('');
     }
   }
 };
 </script>
 
-<style>
-</style>
+<style></style>

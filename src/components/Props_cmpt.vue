@@ -14,14 +14,14 @@
 
 <script>
 export default {
-  name: "propsDemo",
+  name: 'propsDemo',
   props: {
     // 自定义验证函数
     name: String,
     type: {
-      validator: function (value) {
+      validator: function(value) {
         // 这个值必须匹配下列字符串中的一个
-        return ["success", "warning", "danger"].includes(value);
+        return ['success', 'warning', 'danger'].includes(value);
       }
     },
     list: {
@@ -34,16 +34,15 @@ export default {
     },
     onChange: {
       type: Function,
-      default: () => { }
+      default: () => {}
     }
   },
   methods: {
-    handleClick () {
-      this.onChange(this.type === "success" ? "warning" : "success");
+    handleClick() {
+      this.onChange(this.type === 'success' ? 'warning' : 'success');
     }
   }
 };
 </script>
 
-<style>
-</style>
+<style></style>

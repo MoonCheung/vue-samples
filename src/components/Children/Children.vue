@@ -1,20 +1,18 @@
 <template>
   <div class="border2">
-    <a-input v-model="phone"
-             type="number" />
+    <a-input v-model="phone" oninput="value=value.replace(/[^\d]/g,'')" />
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      phone: ""
+      phone: ''
     };
   }
 };
 </script>
 
-<style>
-</style>
+<style></style>

@@ -10,22 +10,21 @@
 export default {
   data() {
     return {
-      firstName: "Foo",
-      lastName: "Bar"
+      firstName: 'Foo',
+      lastName: 'Bar'
     };
   },
   computed: {
     fullName: function() {
-      return this.firstName + " " + this.lastName;
+      return this.firstName + ' ' + this.lastName;
     }
   },
   watch: {
     fullName: function(val, oldVal) {
-      console.log("val: " + val + " oldVal: " + oldVal);
+      console.log('val: ' + val + ' oldVal: ' + oldVal);
     }
   }
 };
 </script>
 
-<style>
-</style>
+<style></style>

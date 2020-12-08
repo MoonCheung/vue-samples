@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import ChildrenA1 from "@/components/Children/ChildrenA1";
-import ChildrenA2 from "@/components/Children/ChildrenA2";
+import ChildrenA1 from '@/components/Children/ChildrenA1';
+import ChildrenA2 from '@/components/Children/ChildrenA2';
 
 export default {
   components: {

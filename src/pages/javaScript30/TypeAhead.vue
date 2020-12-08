@@ -1,16 +1,17 @@
 <template>
   <div class="search-bg">
     <form class="search-form">
-      <a-input type="text"
-               size="large"
-               ref="searchs"
-               class="search"
-               v-model="value"
-               @keyup.enter="displayMatches"
-               @change.stop="displayMatches"
-               placheholder="城市或国家" />
-      <ul ref="suggestions"
-          class="suggestions">
+      <a-input
+        type="text"
+        size="large"
+        ref="searchs"
+        class="search"
+        v-model="value"
+        @keyup.enter="displayMatches"
+        @change.stop="displayMatches"
+        placheholder="城市或国家"
+      />
+      <ul ref="suggestions" class="suggestions">
         <li class="sug_item">筛选城市或国家</li>
       </ul>
     </form>
@@ -20,59 +21,62 @@
 <script>
 export default {
   name: 'TypeAheads',
-  data () {
+  data() {
     return {
       cities: [],
       value: ''
-    }
+    };
   },
-  mounted () {
+  mounted() {
     this.$nextTick(() => {
-      const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+      const endpoint =
+        'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
       fetch(endpoint)
-        .then(res => res.json())
-        .then(data => this.cities.push(...data));
-    })
+        .then((res) => res.json())
+        .then((data) => this.cities.push(...data));
+    });
   },
   //该方法被混入实例调用
   methods: {
-    findMatches: function (wordToMatch, cities) {
-      return cities.filter(place => {
+    findMatches: function(wordToMatch, cities) {
+      return cities.filter((place) => {
         // 这里我们需要弄清楚城市或州是否与搜索到的内容相匹配
         // NOTE：g -> 全局匹配, i -> 忽略大小写
         const regex = new RegExp(wordToMatch, 'gi');
         // NOTE：match方法：检索返回一个字符串匹配正则表达式结果
-        return place.city.match(regex) || place.state.match(regex)
-      })
+        return place.city.match(regex) || place.state.match(regex);
+      });
     },
-    numberWithCommas: function (x) {
+    numberWithCommas: function(x) {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     },
-    displayMatches: function () {
-      const matchArray = this.findMatches(this.value, this.cities)
-      const html = matchArray.map(place => {
-        const regex = new RegExp(this.value, 'gi');
-        // replace方法：返回一个由替换值替换一些或者所有匹配的模式后的新字符串
-        const cityname = place.city.replace(regex, `<span class='hl'>${this.value}</span>`)
-        const statename = place.state.replace(regex, `<span class='hl'>${this.value}</span>`)
-        return `
+    displayMatches: function() {
+      const matchArray = this.findMatches(this.value, this.cities);
+      const html = matchArray
+        .map((place) => {
+          const regex = new RegExp(this.value, 'gi');
+          // replace方法：返回一个由替换值替换一些或者所有匹配的模式后的新字符串
+          const cityname = place.city.replace(regex, `<span class='hl'>${this.value}</span>`);
+          const statename = place.state.replace(regex, `<span class='hl'>${this.value}</span>`);
+          return `
           <li class="sug_item">
             <span class="name">${cityname},${statename}</span>
             <span class="population">${this.numberWithCommas(place.population)}</span>
           </li>
-        `
-      }).join('');
+        `;
+        })
+        .join('');
       this.$refs.suggestions.innerHTML = html;
     }
   }
-}
+};
 </script>
 
 <style>
 .search-bg {
   box-sizing: border-box;
   background: hsla(193, 30%, 64%, 0.78);
-  font-family: "Kaiti", "SimHei", "Hiragino Sans GB ", "helvetica neue";
+  font-family: 'Kaiti', 'SimHei', 'Hiragino Sans GB ', 'helvetica neue';
   font-size: 20px;
   font-weight: 200;
   height: 100%;
@@ -80,7 +84,7 @@ export default {
 input {
   width: 100%;
   padding: 20px;
-  font-family: "Kaiti", "helvetica neue";
+  font-family: 'Kaiti', 'helvetica neue';
 }
 .search-form {
   max-width: 700px;

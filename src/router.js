@@ -7,7 +7,8 @@ Vue.use(Router);
 export default new Router({
   mode: 'history',
   base: __dirname,
-  routes: [{
+  routes: [
+    {
       path: '/',
       name: 'index',
       component: Index
@@ -18,7 +19,8 @@ export default new Router({
       props: true,
       component: Index,
       // children选项里component属性相应引入组件会被渲染在 Index 的 <router-view/> 中
-      children: [{
+      children: [
+        {
           path: 'vIf',
           component: () => import('./pages/basis/vIf')
         },
@@ -81,6 +83,10 @@ export default new Router({
         {
           path: 'nextTick',
           component: () => import('./pages/basis/nextTick')
+        },
+        {
+          path: 'observable',
+          component: () => import('./pages/basis/observable.jsx')
         }
       ]
     },
@@ -90,10 +96,12 @@ export default new Router({
       props: true,
       component: Index,
       // children选项里component属性相应引入组件会被渲染在 Index 的 <router-view/> 中
-      children: [{
-        path: 'setup',
-        component: () => import('./pages/vue3_basis/setup')
-      }]
+      children: [
+        {
+          path: 'setup',
+          component: () => import('./pages/vue3_basis/setup')
+        }
+      ]
     },
     {
       path: '/ecology/:id',
@@ -101,7 +109,8 @@ export default new Router({
       props: true,
       component: Index,
       // children选项里component属性相应引入组件会被渲染在 Index 的 <router-view/> 中
-      children: [{
+      children: [
+        {
           path: 'vuex_example',
           component: () => import('./pages/ecology/example')
         },
@@ -120,86 +129,121 @@ export default new Router({
       name: 'chap',
       props: true,
       component: Index,
-      children: [{
-        path: 'verifyForm',
-        name: 'Form',
-        component: () => import('./pages/actual/verifyForm')
-      }, {
-        path: 'pdf',
-        name: 'HTMLToPDF',
-        component: () => import('./pages/actual/htmlToPdf')
-      }]
+      children: [
+        {
+          path: 'verifyForm',
+          name: 'Form',
+          component: () => import('./pages/actual/verifyForm')
+        },
+        {
+          path: 'pdf',
+          name: 'HTMLToPDF',
+          component: () => import('./pages/actual/htmlToPdf')
+        },
+        {
+          path: 'table',
+          name: 'TableIndex',
+          component: () => import('./pages/actual/tables')
+        },
+        {
+          path: 'canvas',
+          name: 'canvasIndex',
+          component: () => import('./pages/actual/canvas')
+        },
+        {
+          path: 'svg',
+          name: 'svgIndex',
+          component: () => import('./pages/actual/svg')
+        }
+      ]
     },
     {
       path: '/js30/:id',
       name: 'js30',
       props: true,
       component: Index,
-      children: [{
-        path: 'drumKit',
-        name: 'DurmKits',
-        component: () => import('./pages/javaScript30/DurmKit')
-      }, {
-        path: 'clock',
-        name: 'Clocks',
-        component: () => import('./pages/javaScript30/Clock')
-      }, {
-        path: 'variable',
-        name: 'Variables',
-        component: () => import('./pages/javaScript30/Variable')
-      }, {
-        path: 'flexPanel',
-        name: 'FlexPanels',
-        component: () => import('./pages/javaScript30/FlexPanel')
-      }, {
-        path: 'typeAhead',
-        name: 'TypeAheads',
-        component: () => import('./pages/javaScript30/TypeAhead')
-      }, {
-        path: 'H5Canvas',
-        name: 'HTML5Canvas',
-        component: () => import('./pages/javaScript30/H5Canvas')
-      }, {
-        path: 'checkBox',
-        name: 'CheckBoxs',
-        component: () => import('./pages/javaScript30/CheckBox')
-      }, {
-        path: 'scroll',
-        name: 'SlideScrolls',
-        component: () => import('./pages/javaScript30/SlideScroll')
-      }, {
-        path: 'shadow',
-        name: 'Shadows',
-        component: () => import('./pages/javaScript30/Shadow')
-      }, {
-        path: 'notArt',
-        name: 'NotArticles',
-        component: () => import('./pages/javaScript30/NotArticle')
-      }, {
-        path: 'geo',
-        name: 'Geo',
-        component: () => import('./pages/javaScript30/Geolocation')
-      }, {
-        path: 'linkHigh',
-        name: 'LinkHighlight',
-        component: () => import('./pages/javaScript30/LinkHigh')
-      }, {
-        path: 'speech',
-        name: 'Speechs',
-        component: () => import('./pages/javaScript30/Speech')
-      }, {
-        path: 'drag',
-        name: 'Drags',
-        component: () => import('./pages/javaScript30/Drag')
-      }, {
-        path: 'video',
-        name: 'Videos',
-        component: () => import('./pages/javaScript30/Video')
-      }, {
-        path: 'timer',
-        name: 'Timers',
-        component: () => import('./pages/javaScript30/Timer')
-      }]
+      children: [
+        {
+          path: 'drumKit',
+          name: 'DurmKits',
+          component: () => import('./pages/javaScript30/DurmKit')
+        },
+        {
+          path: 'clock',
+          name: 'Clocks',
+          component: () => import('./pages/javaScript30/Clock')
+        },
+        {
+          path: 'variable',
+          name: 'Variables',
+          component: () => import('./pages/javaScript30/Variable')
+        },
+        {
+          path: 'flexPanel',
+          name: 'FlexPanels',
+          component: () => import('./pages/javaScript30/FlexPanel')
+        },
+        {
+          path: 'typeAhead',
+          name: 'TypeAheads',
+          component: () => import('./pages/javaScript30/TypeAhead')
+        },
+        {
+          path: 'H5Canvas',
+          name: 'HTML5Canvas',
+          component: () => import('./pages/javaScript30/H5Canvas')
+        },
+        {
+          path: 'checkBox',
+          name: 'CheckBoxs',
+          component: () => import('./pages/javaScript30/CheckBox')
+        },
+        {
+          path: 'scroll',
+          name: 'SlideScrolls',
+          component: () => import('./pages/javaScript30/SlideScroll')
+        },
+        {
+          path: 'shadow',
+          name: 'Shadows',
+          component: () => import('./pages/javaScript30/Shadow')
+        },
+        {
+          path: 'notArt',
+          name: 'NotArticles',
+          component: () => import('./pages/javaScript30/NotArticle')
+        },
+        {
+          path: 'geo',
+          name: 'Geo',
+          component: () => import('./pages/javaScript30/Geolocation')
+        },
+        {
+          path: 'linkHigh',
+          name: 'LinkHighlight',
+          component: () => import('./pages/javaScript30/LinkHigh')
+        },
+        {
+          path: 'speech',
+          name: 'Speechs',
+          component: () => import('./pages/javaScript30/Speech')
+        },
+        {
+          path: 'drag',
+          name: 'Drags',
+          component: () => import('./pages/javaScript30/Drag')
+        },
+        {
+          path: 'video',
+          name: 'Videos',
+          component: () => import('./pages/javaScript30/Video')
+        },
+        {
+          path: 'timer',
+          name: 'Timers',
+          component: () => import('./pages/javaScript30/Timer')
+        }
+      ]
     }
   ]
 });
