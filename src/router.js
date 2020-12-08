@@ -154,6 +154,11 @@ export default new Router({
           path: 'svg',
           name: 'svgIndex',
           component: () => import('./pages/actual/svg')
+        },
+        {
+          path: 'webgl',
+          name: 'WebGLIndex',
+          component: () => import('./pages/actual/webgl')
         }
       ]
     },
