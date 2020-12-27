@@ -159,6 +159,16 @@ export default new Router({
           path: 'webgl',
           name: 'WebGLIndex',
           component: () => import('./pages/actual/webgl')
+        },
+        {
+          path: 'tree',
+          name: 'treeIndex',
+          component: () => import('./pages/actual/trees')
+        },
+        {
+          path: 'curve',
+          name: 'curveIndex',
+          component: () => import('./pages/actual/curves')
         }
       ]
     },

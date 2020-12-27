@@ -105,6 +105,12 @@
                 <li>
                   <router-link to="/chap/5/webgl">WebGL图形</router-link>
                 </li>
+                <li>
+                  <router-link to="/chap/6/tree">随机树图形</router-link>
+                </li>
+                <li>
+                  <router-link to="/chap/7/curve">曲线图形</router-link>
+                </li>
               </ul>
             </a-collapse-panel>
             <a-collapse-panel :header="js30_msg" :style="customStyle" key="6">

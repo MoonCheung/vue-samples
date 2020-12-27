@@ -1,5 +1,5 @@
 <template>
-  <div class="webgl_wrap">
+  <div class="webgl-wrap">
     <canvas class="webgl" width="300" height="300"></canvas>
   </div>
 </template>
@@ -12,7 +12,9 @@ export default {
   },
   methods: {
     drawRegionWebGL() {
+      /** @type {HTMLCanvasElement} */
       const canvas = document.querySelector('.webgl');
+      /** @type {WebGLRenderingContext} */
       const gl = canvas.getContext('webgl');
 
       const vertex = `
